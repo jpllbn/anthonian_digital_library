@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login | Anthonian Digital Library</title>
-    <link rel="stylesheet" href="../css/output.css">
+    <link rel="stylesheet" href="../css/main.css">
 </head>
 <body>
      <!-- Login Section -->
@@ -13,10 +13,10 @@
       <h2 class="text-red-900 text-3xl font-bold mb-8 text-center">Login to Your Account</h2>
       <div class="max-w-md mx-auto bg-white shadow rounded-lg p-8">
         <h3 class="text-2xl font-semibold text-red-900 mb-6 text-center">Login to ADL</h3>
-        <form action="#" method="POST" class="space-y-6">
+        <form action="http://127.0.0.1:8000/token" method="POST" class="space-y-6">
           <div>
             <label for="username" class="block text-gray-700 font-medium mb-2">Username</label>
-            <input type="text" id="username" name="username" placeholder="Enter your username" class="w-full border border-gray-300 rounded px-4 py-3 focus:outline-none focus:ring focus:ring-red-200" />
+            <input type="text" id="username" name="identifier" placeholder="Enter your username" class="w-full border border-gray-300 rounded px-4 py-3 focus:outline-none focus:ring focus:ring-red-200" />
             <p class="text-gray-500 text-sm mt-1">Student: student-ID, Faculty: fac-ID, Admin: adm-ID</p>
           </div>
           <div>
@@ -37,6 +37,36 @@
       </div>
     </div>
   </section>
+
+  <script>
+    document.querySelector('form').addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const identifier = document.getElementById('username').value;
+      const password = document.getElementById('password').value;
+      try {
+        // Request access token
+        const tokenRes = await fetch('http://127.0.0.1:8000/token', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: new URLSearchParams({ identifier: identifier, password: password })
+        });
+        if (!tokenRes.ok) throw new Error('Invalid credentials');
+        const { access_token } = await tokenRes.json();
+
+        // Fetch current user data
+        const userRes = await fetch('http://127.0.0.1:8000/users/me/', {
+          headers: { 'Authorization': `Bearer ${access_token}` }
+        });
+        if (!userRes.ok) throw new Error('Failed to fetch user data');
+        const userData = await userRes.json();
+        console.log('Logged in user:', userData);
+        // Display user info or redirect
+        alert('Welcome, ' + userData.username + '! Role: ' + userData.role);
+      } catch (err) {
+        alert(err.message);
+      }
+    });
+  </script>
 
 </body>
 </html>

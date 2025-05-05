@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digital Library Pass - Anthonian Library</title>
+  <link rel="stylesheet" href="../css/output.css">
+</head>
+<body class="flex h-screen bg-green-50 font-sans antialiased text-gray-800">
+  <!-- Sidebar -->
+  <aside class="w-64 bg-red-900 text-white flex flex-col">
+    <div class="p-6 flex items-center space-x-2">
+      <!-- Book Icon -->
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M12 20l9-5-9-5-9 5 9 5z" />
+        <path stroke-linecap="round" stroke-linejoin="round" d="M12 12l9-5-9-5-9 5 9 5z" />
+      </svg>
+      <span class="text-lg font-semibold">Anthonian Library</span>
+    </div>
+    <nav class="flex-1 px-4 space-y-1">
+      <a href="#" class="flex items-center px-4 py-2 bg-red-800 rounded text-white">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M13 5v6h6" />
+        </svg>
+        Dashboard
+      </a>
+      <a href="#" class="flex items-center px-4 py-2 rounded hover:bg-red-800">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M8 17l4 4 4-4m0-5l-4-4-4 4" />
+        </svg>
+        Browse Catalog
+      </a>
+      <a href="#" class="flex items-center px-4 py-2 rounded hover:bg-red-800">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4" />
+        </svg>
+        Digital Library Pass
+      </a>
+      <a href="#" class="flex items-center px-4 py-2 rounded hover:bg-red-800">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4 8-9 8s-9-3.582-9-8 4-8 9-8 9 3.582 9 8z" />
+        </svg>
+        My Borrowings
+      </a>
+      <a href="#" class="flex items-center px-4 py-2 rounded hover:bg-red-800">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01M21 12c0 4.418-4 8-9 8s-9-3.582-9-8 4-8 9-8 9 3.582 9 8z" />
+        </svg>
+        Clearance Status
+      </a>
+      <a href="#" class="flex items-center px-4 py-2 rounded hover:bg-red-800">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M10 6h10M10 12h7M10 18h7M4 6h.01M4 12h.01M4 18h.01" />
+        </svg>
+        Settings
+      </a>
+    </nav>
+    <div class="p-4">
+      <a href="#" class="flex items-center px-4 py-2 rounded hover:bg-red-800">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M17 16l4-4m0 0l-4-4m4 4H7" />
+        </svg>
+        Logout
+      </a>
+    </div>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="flex-1 overflow-auto p-8">
+    <h1 class="text-3xl font-bold text-red-900">Student Dashboard</h1>
+    <p class="text-gray-500 mt-1">Welcome back, student-11412! Manage your library activities here.</p>
+
+    <!-- Top Cards -->
+    <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+      <!-- My Borrowings -->
+      <div class="bg-white rounded-lg shadow p-6 border-l-4 border-red-900 flex flex-col justify-between">
+        <div>
+          <div class="flex items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-red-900 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 20l9-5-9-5-9 5 9 5z" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 12l9-5-9-5-9 5 9 5z" />
+            </svg>
+            <h2 class="text-lg font-semibold">My Borrowings</h2>
+          </div>
+          <p class="text-gray-500 mt-1">Currently borrowed items</p>
+          <div class="mt-4 text-3xl font-bold">2</div>
+          <p class="text-gray-500">1 due in 3 days</p>
+        </div>
+        <button class="mt-6 py-2 px-4 border border-gray-200 rounded hover:bg-gray-50">View Details</button>
+      </div>
+
+      <!-- Library Pass -->
+      <div class="bg-white rounded-lg shadow p-6 border-l-4 border-yellow-400 flex flex-col justify-between">
+        <div>
+          <div class="flex items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-yellow-400 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 17v-6a2 2 0 012-2h4a2 2 0 012 2v6m-4 0v4m0-4H7" />
+            </svg>
+            <h2 class="text-lg font-semibold">Library Pass</h2>
+          </div>
+          <p class="text-gray-500 mt-1">Your digital access pass</p>
+          <div class="mt-4 text-3xl font-bold text-green-600">Active</div>
+          <p class="text-gray-500">Valid until May 15, 2025</p>
+        </div>
+        <button class="mt-6 py-2 px-4 border border-gray-200 rounded hover:bg-gray-50">View Pass</button>
+      </div>
+
+      <!-- Clearance Status -->
+      <div class="bg-white rounded-lg shadow p-6 border-l-4 border-green-500 flex flex-col justify-between">
+        <div>
+          <div class="flex items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4" />
+            </svg>
+            <h2 class="text-lg font-semibold">Clearance Status</h2>
+          </div>
+          <p class="text-gray-500 mt-1">Current library clearance</p>
+          <div class="mt-4 text-3xl font-bold text-green-600">Cleared</div>
+          <p class="text-gray-500">Last updated: April 25, 2025</p>
+        </div>
+        <button class="mt-6 py-2 px-4 border border-gray-200 rounded hover:bg-gray-50">View Status</button>
+      </div>
+    </div>
+
+    <!-- Middle Sections -->
+    <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+      <!-- Quick Search -->
+      <div class="bg-white rounded-lg shadow p-6">
+        <h2 class="flex items-center text-lg font-semibold">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+          </svg>
+          Quick Search
+        </h2>
+        <p class="text-gray-500 mt-1">Find books and resources</p>
+        <div class="mt-4 flex">
+          <input type="text" placeholder="Search for titles, authors, or keywords..." class="flex-1 border border-gray-300 rounded-l px-4 py-2 focus:outline-none focus:ring focus:ring-red-200" />
+          <button class="bg-red-900 text-white px-4 rounded-r hover:bg-red-800">Search</button>
+        </div>
+        <div class="mt-4">
+          <p class="text-gray-500">Popular Categories</p>
+          <div class="mt-2 flex flex-wrap gap-2">
+            <span class="px-3 py-1 border border-gray-300 rounded">Computer Science</span>
+            <span class="px-3 py-1 border border-gray-300 rounded">Literature</span>
+            <span class="px-3 py-1 border border-gray-300 rounded">Engineering</span>
+            <span class="px-3 py-1 border border-gray-300 rounded">Research</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Recent Activity -->
+      <div class="bg-white rounded-lg shadow p-6">
+        <h2 class="flex items-center text-lg font-semibold">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          Recent Activity
+        </h2>
+        <p class="text-gray-500 mt-1">Your latest library activities</p>
+        <ul class="mt-4 space-y-4">
+          <li class="flex items-start">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-600 mr-2 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 20l9-5-9-5-9 5 9 5z" />
+            </svg>
+            <div>
+              <p><span class="font-semibold">Borrowed</span> "Systems Integration Architecture"</p>
+              <p class="text-gray-500 text-sm">Apr 23, 2025 at 10:15 AM</p>
+            </div>
+          </li>
+          <li class="flex items-start">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-yellow-400 mr-2 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            <div>
+              <p><span class="font-semibold">Renewed</span> "Database Design Principles"</p>
+              <p class="text-gray-500 text-sm">Apr 20, 2025 at 2:30 PM</p>
+            </div>
+          </li>
+          <li class="flex items-start">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-blue-600 mr-2 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 20l9-5-9-5-9 5 9 5z" />
+            </svg>
+            <div>
+              <p><span class="font-semibold">Returned</span> "Advanced Programming Concepts"</p>
+              <p class="text-gray-500 text-sm">Apr 18, 2025 at 4:45 PM</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Notices -->
+    <div class="mt-8 bg-yellow-50 border-l-4 border-yellow-400 rounded-lg p-6">
+      <h2 class="flex items-center text-lg font-semibold text-yellow-800">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01M2.93 12a9 9 0 1118.14 0 9 9 0 01-18.14 0z" />
+        </svg>
+        Notices
+      </h2>
+      <div class="mt-4 space-y-4">
+        <div class="bg-white rounded p-4 shadow">
+          <h3 class="font-semibold">Library Hour Extension</h3>
+          <p class="text-gray-500">The library hours will be extended until 10 PM during finals week (May 10-15).</p>
+        </div>
+        <div class="bg-white rounded p-4 shadow">
+          <h3 class="font-semibold">New Research Materials</h3>
+          <p class="text-gray-500">Check out the new research materials added to the Computer Science section.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+</html> 
